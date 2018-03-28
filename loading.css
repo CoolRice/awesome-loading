@@ -1,5 +1,18 @@
+body {
+  background-color: #f4f5f5;
+}
+
 #app {
   font-family: 'Helvetica Neue', Helvetica, sans-serif;
   line-height: 1.5rem;
   font-weight: 400
 }
+
+
+#app header {
+    height: 100px;
+    background-color: #56c4e1;
+    h1 {
+      text-align: center;
+    }
+  }
