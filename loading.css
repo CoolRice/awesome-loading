@@ -1,5 +1,6 @@
 body {
   background-color: #f4f5f5;
+  margin: 0;
 }
 
 #app {
@@ -14,5 +15,6 @@ body {
     background-color: #56c4e1;
     h1 {
       text-align: center;
+      margin: 0;
     }
   }

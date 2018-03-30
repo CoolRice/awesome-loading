@@ -1,0 +1,31 @@
+{
+  "name": "awesome-loading",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CoolRice/awesome-loading.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CoolRice/awesome-loading/issues"
+  },
+  "homepage": "https://github.com/CoolRice/awesome-loading#readme",
+  "dependencies": {
+    "@babel/standalone": "^7.0.0-beta.42",
+    "babel-loader": "^7.1.4",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "webpack": "^4.3.0",
+    "webpack-cli": "^2.0.13"
+  }
+}
