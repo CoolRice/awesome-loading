@@ -1,0 +1,32 @@
+@-webkit-keyframes three-dots-jump {
+	0%, 50%, 100% {
+		transform: translate(0, 0);
+	}
+	25% {
+		transform: translate(0, -10px);
+	}
+	75% {
+		transform: translate(0, 10px);
+	}
+}
+
+.three-dots-jump {
+  div {
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 2px;
+
+		&:nth-child(1) {
+			animation: three-dots-jump 1s -0.2s linear infinite;
+		}
+		&:nth-child(2) {
+			animation: three-dots-jump 1s -0.1s linear infinite;
+		}
+		&:nth-child(3) {
+			animation: three-dots-jump 1s 0s linear infinite;
+		}
+  }
+}

@@ -1,0 +1,31 @@
+@keyframes move {
+  0% {
+		left: 0%;
+	}
+  100% {
+		left:100%;
+	}
+}
+
+.three-dots-chase {
+  div {
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 2px;
+		position: absolute;
+		text-align: left;
+
+		&:nth-child(1) {
+		  animation: move 2s 0ms infinite cubic-bezier(.2,.64,.81,.23);
+		}
+		&:nth-child(2) {
+		  animation: move 2s -400ms infinite cubic-bezier(.2,.64,.81,.23);
+		}
+		&:nth-child(3) {
+		  animation: move 2s -800ms infinite cubic-bezier(.2,.64,.81,.23);
+		}
+  }
+}
