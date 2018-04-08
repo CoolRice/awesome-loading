@@ -1,5 +1,10 @@
 const path = require('path');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
+
+const extractSass = new ExtractTextPlugin({
+    filename: 'main.css',
+});
 module.exports = {
   entry: './src/index.js',
   mode: 'development',
@@ -8,7 +13,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   },
   devtool: 'inline-source-map',
-    devServer: {
+  devServer: {
     contentBase: './dist'
   },
   module: {
@@ -26,21 +31,25 @@ module.exports = {
       },
       {
           test: /\.scss$/,
-          use: [{
-            loader: "style-loader"
-          },
-          {
-            loader: "css-loader",
-            options: {
-              sourceMap: true
-            }
-          },
-          {
-            loader: "sass-loader", options: {
-              sourceMap: true
-            }
-          }]
+          use: extractSass.extract({
+            use: [
+              {
+                loader: "css-loader",
+                options: {
+                  sourceMap: true
+                }
+              },
+              {
+                loader: "sass-loader", options: {
+                  sourceMap: true
+                }
+              }
+            ],
+          })
         }
     ]
-  }
+  },
+  plugins: [
+    extractSass
+  ]
 }
