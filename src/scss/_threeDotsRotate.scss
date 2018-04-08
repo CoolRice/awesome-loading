@@ -20,11 +20,8 @@
 
 .three-dots-rotate {
   div {
-    width: 15px;
-    height: 15px;
-    background: #fff;
-    border-radius: 50%;
-    display: inline-block;
+		@extend %basic-dot-style;
+		
     margin-right: 10px;
 
 		&:nth-child(1) {

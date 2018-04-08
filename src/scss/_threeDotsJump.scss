@@ -12,11 +12,8 @@
 
 .three-dots-jump {
   div {
-    width: 15px;
-    height: 15px;
-    background: #fff;
-    border-radius: 50%;
-    display: inline-block;
+		@extend %basic-dot-style;
+
     margin: 2px;
 
 		&:nth-child(1) {
