@@ -1,1 +1,3 @@
-# awesome-loading
+# Awesome Loading
+
+## A collection of awesome loading animations 💥
