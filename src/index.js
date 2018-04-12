@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import LoadingSection from './LoadingSection';
-import './index.scss';
+import './scss/index.scss';
 
 
 class App extends React.Component {

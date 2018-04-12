@@ -36,11 +36,12 @@ body {
       position: relative;
       width: 23%;
       height: 0;
-      padding-bottom: 24%;
+      padding-bottom: 23%;
       display: inline-block;
-      background-color: #baa58d;
+      background-color: #90CAF9;
       margin-top: 2%;
-      margin-left: 2%;
+      margin-left: 1%;
+      margin-right: 1%;
       border-radius: 4px;
       box-shadow: 0 2px 7px rgba(0,0,0,0.37);
 
@@ -55,6 +56,8 @@ body {
         @import "_threeDotsJump";
         @import "_threeDotsRotate";
         @import "_threeDotsChase";
+        @import "_circleDotsScale";
+        @import "_circleLinesChase";
       }
     }
   }

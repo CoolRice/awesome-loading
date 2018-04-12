@@ -1,4 +1,4 @@
-@-webkit-keyframes three-dots-scale {
+@keyframes three-dots-scale {
 	0% {
 		transform: scale(1);
 	}
@@ -13,7 +13,6 @@
 .three-dots-scale {
   div {
 		@extend %basic-dot-style;
-
     margin: 2px;
 
 	  &:nth-child(1) {

@@ -1,0 +1,41 @@
+@keyframes circle-lines-chase {
+	0% {
+		transform: translate(-50%, -50%) rotate(0deg);
+	}
+	100% {
+		transform: translate(-50%, -50%) rotate(360deg);
+	}
+}
+
+.circle-lines-chase {
+	width: 0px;
+	margin: 0 auto;
+	position: relative;
+
+  div {
+		position: absolute;
+
+		left: 50%;
+		right: 50%;
+		transform: translate(-50%, -50%);
+		border-radius: 50%;
+		border: 3px solid transparent;
+		border-top-color: #fff;
+
+		&:nth-child(1) {
+			width: 50px;
+			height: 50px;
+			animation: circle-lines-chase 0.5s -0.5s infinite linear;
+		}
+		&:nth-child(2) {
+			width: 60px;
+			height: 60px;
+			animation: circle-lines-chase 1s -1s infinite linear;
+		}
+		&:nth-child(3) {
+			width: 70px;
+			height: 70px;
+			animation: circle-lines-chase 1.5s -1.5s infinite linear;
+		}
+  }
+}
