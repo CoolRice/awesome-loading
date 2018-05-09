@@ -1,7 +1,8 @@
 import React from 'react';
 import Modal from 'react-modal';
 import SyntaxHighlighter from 'react-syntax-highlighter';
-import { docco, atelierEstuaryDark } from 'react-syntax-highlighter/styles/hljs';
+import { docco, tomorrowNightEighties } from 'react-syntax-highlighter/styles/hljs';
+import loadingCSS from './loadingCSS';
 
 Modal.setAppElement('#app')
 
@@ -9,7 +10,8 @@ class SourceDialog extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      modalIsOpen: props.modalIsOpen
+      modalIsOpen: props.modalIsOpen,
+      loadingClassName: props.loadingClassName,
     };
     this.closeModal = this.closeModal.bind(this);
   }
@@ -28,13 +30,14 @@ class SourceDialog extends React.Component {
   }
 
   render() {
+    const htmlString = loadingCSS[this.state.loadingClassName]['htmlString'];
+    const cssString = loadingCSS[this.state.loadingClassName]['cssString'];
+
     const HTMLCodeView = () => {
-      const codeString = '(num) => num + 1;console.log(1)';
-      return <SyntaxHighlighter language='html' style={atelierEstuaryDark}>{codeString}</SyntaxHighlighter>;
+      return <SyntaxHighlighter language='html' style={tomorrowNightEighties}>{htmlString}</SyntaxHighlighter>;
     }
     const CSSCodeView = () => {
-      const codeString = '(num) => num + 1;console.log(1)';
-      return <SyntaxHighlighter language='css' style={atelierEstuaryDark}>{codeString}</SyntaxHighlighter>;
+      return <SyntaxHighlighter language='css' style={tomorrowNightEighties}>{cssString}</SyntaxHighlighter>;
     }
     return (
       <Modal

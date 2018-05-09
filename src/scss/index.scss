@@ -92,6 +92,9 @@ body {
     }
     .source-view {
       height: 450px;
+      pre {
+        max-height: 320px;
+      }
     }
     .close-btn {
       float: right;
