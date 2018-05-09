@@ -1,15 +1,26 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-
 
 class LoadingSection extends React.Component {
-
+  constructor() {
+    super();
+    this.state = {
+      modalIsOpen: false
+    };
+    this.openModal = this.openModal.bind(this);
+  }
   renderItem(fragments) {
     return fragments.map((fragment, index) =>
-      <div key={index} className="col"><div className="content">{fragment}</div></div>)
+      <div onClick={this.openModal.bind(this, fragment.props.className)} key={index} className="col"><div className="content">{fragment}</div></div>)
+  }
+
+  openModal(loadingClassName) {
+    import(/* webpackChunkName: "sourceDialog" */ './SourceDialog').then(SourceDialog => {
+      this.setState({ SourceDialog, modalIsOpen: true, loadingClassName });
+    });
   }
 
   render(){
+    const { SourceDialog, modalIsOpen, loadingClassName } = this.state;
     return (
       <section className="loading-section">
          {
@@ -29,6 +40,7 @@ class LoadingSection extends React.Component {
              <div className="three-dots-jump"><div/><div/><div/></div>,
            ])
          }
+         {SourceDialog && <SourceDialog.default modalIsOpen={modalIsOpen} loadingClassName={loadingClassName}/>}
      </section>
     )
   }

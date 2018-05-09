@@ -3,7 +3,7 @@
 # dependencies
 /node_modules
 
-bundle.js
+*bundle.js
 
 # misc
 .DS_Store

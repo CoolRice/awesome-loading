@@ -26,27 +26,30 @@ module.exports = {
           presets: [
             'react',
             ['env', {"targets": { "browsers": ['> 5%']}}]
+          ],
+          plugins: [
+            'syntax-dynamic-import'
           ]
         }
       },
       {
-          test: /\.scss$/,
-          use: extractSass.extract({
-            use: [
-              {
-                loader: "css-loader",
-                options: {
-                  sourceMap: true
-                }
-              },
-              {
-                loader: "sass-loader", options: {
-                  sourceMap: true
-                }
+        test: /\.scss$/,
+        use: extractSass.extract({
+          use: [
+            {
+              loader: "css-loader",
+              options: {
+                sourceMap: true
               }
-            ],
-          })
-        }
+            },
+            {
+              loader: "sass-loader", options: {
+                sourceMap: true
+              }
+            }
+          ],
+        })
+      }
     ]
   },
   plugins: [
