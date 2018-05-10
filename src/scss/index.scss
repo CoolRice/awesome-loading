@@ -11,9 +11,17 @@ body {
   font-family: 'Helvetica Neue', Helvetica, sans-serif;
   font-weight: 400;
 
+  svg {
+    width: 130px;
+    height: 130px;
+  }
+
   header {
     height: 300px;
     background-color: #353537;
+    @media screen and ('max-device-width': 414px) {
+      height: 200px;
+    }
     h1 {
       font-size: 70px;
       color: #ff6347;
@@ -23,6 +31,7 @@ body {
       top: 50%;
       transform: translateY(-50%);
     }
+
   }
 
   .loading-section {
@@ -43,7 +52,6 @@ body {
       border-radius: 4px;
       box-shadow: 0 2px 7px rgba(0,0,0,0.37);
       cursor: pointer;
-
       .content {
         width: 80%;
         text-align: center;
