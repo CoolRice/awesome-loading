@@ -19,25 +19,31 @@ class LoadingSection extends React.Component {
     });
   }
 
+  renderLoadingItem(className, number) {
+    const divs = [];
+    for(let i=0; i<=number -1; i ++) {
+      divs.push(<div key={i} />);
+    }
+    return (
+      <div className={className}>
+        {divs}
+      </div>
+    );
+  }
+
   render(){
     const { SourceDialog, modalIsOpen, loadingClassName } = this.state;
     return (
       <section className="loading-section">
          {
            this.renderItem([
-             <div className="three-dots-scale"><div/><div/><div/></div>,
-             <div className="three-dots-chase"><div/><div/><div/></div>,
-             <div className="three-dots-rotate"><div/><div/><div/></div>,
-             <div className="three-dots-jump"><div/><div/><div/></div>,
-             <div className="circle-dots-scale"><div/><div/><div/><div/><div/><div/><div/><div/></div>,
-             <div className="circle-lines-chase"><div/><div/><div/></div>,
-             <div className="three-dots-jump"><div/><div/><div/></div>,
-             <div className="three-dots-jump"><div/><div/><div/></div>,
-             <div className="three-dots-jump"><div/><div/><div/></div>,
-             <div className="three-dots-jump"><div/><div/><div/></div>,
-             <div className="three-dots-jump"><div/><div/><div/></div>,
-             <div className="three-dots-jump"><div/><div/><div/></div>,
-             <div className="three-dots-jump"><div/><div/><div/></div>,
+             this.renderLoadingItem('three-dots-scale', 3),
+             this.renderLoadingItem('three-dots-chase', 3),
+             this.renderLoadingItem('three-dots-rotate', 3),
+             this.renderLoadingItem('three-dots-jump', 3),
+             this.renderLoadingItem('circle-dots-scale', 8),
+             this.renderLoadingItem('circle-lines-chase', 3),
+             this.renderLoadingItem('five-bars-vertical', 5),
            ])
          }
          {SourceDialog && <SourceDialog.default modalIsOpen={modalIsOpen} loadingClassName={loadingClassName}/>}
