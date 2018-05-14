@@ -44,6 +44,7 @@ class LoadingSection extends React.Component {
              this.renderLoadingItem('circle-dots-scale', 8),
              this.renderLoadingItem('circle-lines-chase', 3),
              this.renderLoadingItem('five-bars-vertical', 5),
+             this.renderLoadingItem('progress-bar', 0),
            ])
          }
          {SourceDialog && <SourceDialog.default modalIsOpen={modalIsOpen} loadingClassName={loadingClassName}/>}
