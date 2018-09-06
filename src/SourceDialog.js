@@ -3,7 +3,6 @@ import Modal from 'react-modal';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { docco, tomorrowNightEighties } from 'react-syntax-highlighter/styles/hljs';
 import perfectionist from 'perfectionist';
-import loadingCSS from './loadingCSS';
 
 Modal.setAppElement('#app')
 
@@ -19,7 +18,6 @@ class SourceDialog extends React.Component {
 
   render() {
     const { selectedClassName, innerDivNumber } = this.props;
-    // const htmlString = loadingCSS[this.props.selectedClassName]['htmlString'];
     const htmlString = `<div class="${selectedClassName}">${'<div/>'.repeat(innerDivNumber)}</div>`
     const cssString = perfectionist.process(this.props.classContent).css;
 
