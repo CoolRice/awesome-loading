@@ -14,7 +14,7 @@
 
 .three-dots-scale {
   div {
-		@extend %basic-dot-style;
+		@include basic-dot-style;
     margin: 2px;
 
 	  &:nth-child(1) {

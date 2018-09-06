@@ -22,7 +22,7 @@
 
 .three-dots-rotate {
   div {
-		@extend %basic-dot-style;
+		@include basic-dot-style;
 
     margin-right: 10px;
 

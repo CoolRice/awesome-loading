@@ -2,6 +2,7 @@ import React from 'react';
 import Modal from 'react-modal';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { docco, tomorrowNightEighties } from 'react-syntax-highlighter/styles/hljs';
+import perfectionist from 'perfectionist';
 import loadingCSS from './loadingCSS';
 
 Modal.setAppElement('#app')
@@ -9,29 +10,18 @@ Modal.setAppElement('#app')
 class SourceDialog extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      modalIsOpen: props.modalIsOpen,
-      loadingClassName: props.loadingClassName,
-    };
     this.closeModal = this.closeModal.bind(this);
   }
 
-  static getDerivedStateFromProps(nextProps, prevState) {
-    if(prevState.modalIsOpen !== nextProps.modalIsOpen) {
-      return {
-        modalIsOpen: nextProps.modalIsOpen
-      }
-    }
-    return null;
-  }
-
   closeModal() {
-    this.setState({modalIsOpen: false});
+    this.props.closeDialog();
   }
 
   render() {
-    const htmlString = loadingCSS[this.state.loadingClassName]['htmlString'];
-    const cssString = loadingCSS[this.state.loadingClassName]['cssString'];
+    const { selectedClassName, innerDivNumber } = this.props;
+    // const htmlString = loadingCSS[this.props.selectedClassName]['htmlString'];
+    const htmlString = `<div class="${selectedClassName}">${'<div/>'.repeat(innerDivNumber)}</div>`
+    const cssString = perfectionist.process(this.props.classContent).css;
 
     const HTMLCodeView = () => {
       return <SyntaxHighlighter language='html' style={tomorrowNightEighties}>{htmlString}</SyntaxHighlighter>;
@@ -41,16 +31,16 @@ class SourceDialog extends React.Component {
     }
     return (
       <Modal
-       isOpen={this.state.modalIsOpen}
+       isOpen
        onRequestClose={this.closeModal}
        className="dialog-content"
        overlayClassName="dialog-overlay"
      >
        <h2 ref={subtitle => this.subtitle = subtitle}>Source Code</h2>
        <div className="source-view">
-         <div>div</div>
+         <div>HTML</div>
          <HTMLCodeView/>
-         <div>css</div>
+         <div>CSS</div>
          <CSSCodeView/>
        </div>
        <button className="close-btn" onClick={this.closeModal}>close</button>

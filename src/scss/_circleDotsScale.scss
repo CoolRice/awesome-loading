@@ -29,7 +29,7 @@
 	position: relative;
 
   div {
-		@extend %basic-dot-style;
+		@include basic-dot-style;
 		position: absolute;
     margin: 2px;
 

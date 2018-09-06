@@ -14,7 +14,7 @@
 
 .three-dots-jump {
   div {
-		@extend %basic-dot-style;
+		@include basic-dot-style;
 
     margin: 2px;
 

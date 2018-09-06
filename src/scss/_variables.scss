@@ -1,7 +1,9 @@
-%basic-dot-style {
+$primary-color: #fff;
+
+@mixin basic-dot-style {
   width: 16px;
   height: 16px;
-  background: #fff;
+  background: $primary-color;
   border-radius: 50%;
   display: inline-block;
 }

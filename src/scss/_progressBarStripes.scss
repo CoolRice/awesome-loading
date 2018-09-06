@@ -1,0 +1,15 @@
+@keyframes progress-bar-stripes {
+    from {
+        background-position: -70px 0;
+    }
+
+    to {
+        background-position: 0 0;
+    }
+}
+.progress-bar-stripes {
+    height: 30px;
+    background-image: linear-gradient(118deg,transparent 0%, transparent 33%, $primary-color 33%,$primary-color 66%,transparent 66%,transparent);
+    background-size: 35px 35px;
+    animation: progress-bar-stripes 2s linear infinite;
+}
