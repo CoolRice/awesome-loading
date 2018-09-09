@@ -10,10 +10,17 @@ class App extends React.Component {
      return(
        <div>
          <header>
-           <h1>AWESOME-LOADING</h1>
+           <div className="header">
+             <div className="header-primary">AWESOME-LOADING</div>
+             <div className="header-secendary">A pure CSS loading animation collection</div>
+           </div>
          </header>
          <LoadingSection />
-         <GithubCorner href="https://github.com/CoolRice/awesome-loading" octoColor="#353537" bannerColor="#ff6347"/>
+         <GithubCorner
+           href="https://github.com/CoolRice/awesome-loading"
+           octoColor="#353537"
+           bannerColor="#f4f4f4"
+         />
        </div>
       )
    }

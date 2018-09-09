@@ -18,7 +18,8 @@ class SourceDialog extends React.Component {
 
   render() {
     const { selectedClassName, innerDivNumber } = this.props;
-    const htmlString = `<div class="${selectedClassName}">${'<div/>'.repeat(innerDivNumber)}</div>`
+    const htmlString = `<div class="${selectedClassName}">${'<div></div>'.repeat(innerDivNumber)}</div>`;
+    console.log(htmlString)
     const cssString = perfectionist.process(this.props.classContent).css;
 
     const HTMLCodeView = () => {

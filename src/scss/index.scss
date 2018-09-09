@@ -10,6 +10,7 @@ body {
 #app {
   font-family: 'Helvetica Neue', Helvetica, sans-serif;
   font-weight: 400;
+  padding-bottom: 20px;
 
   svg {
     width: 130px;
@@ -22,7 +23,7 @@ body {
     @media screen and ('max-device-width': 414px) {
       height: 200px;
     }
-    h1 {
+    .header {
       font-size: 70px;
       color: #ff6347;
       position: relative;
@@ -30,6 +31,10 @@ body {
       margin: 0;
       top: 50%;
       transform: translateY(-50%);
+      .header-secendary {
+        font-size: 18px;
+        color: #f4f4f4;
+      }
     }
 
   }

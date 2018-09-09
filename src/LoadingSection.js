@@ -40,7 +40,7 @@ class LoadingSection extends React.Component {
                   }
               }
               // CSSKeyframesRule
-              if (classes[x].name === className && classes[x].cssText) {
+              if (classes[x].name && classes[x].name.includes(className) && classes[x].cssText) {
                 result += classes[x].cssText;
               }
           }
