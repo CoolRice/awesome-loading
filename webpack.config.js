@@ -26,7 +26,7 @@ module.exports = {
         options: {
           presets: [
             'react',
-            ['env', {"targets": { "browsers": ['> 5%']}}]
+            ['env', {"targets": { "browsers": ['defaults']}}]
           ],
           plugins: [
             'syntax-dynamic-import'

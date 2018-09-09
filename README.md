@@ -1,4 +1,4 @@
-# [Awesome Loading](http://www.awesome-loading.com)
+# [Awesome Loading](http://www.awesome-loading.com){:target="_blank"}
 
 
 A collection of awesome CSS loading animations 💥
