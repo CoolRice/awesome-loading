@@ -1,7 +1,8 @@
-# [Awesome Loading](http://www.awesome-loading.com){:target="_blank"}
+# [Awesome Loading](http://www.awesome-loading.com)
 
 
 A collection of awesome CSS loading animations 💥
+![screen short](https://github.com/CoolRice/awesome-loading/blob/master/docs/screenshort.png?raw=true)
 
 ## Features
 - [x] Pure CSS & No JavaScript
