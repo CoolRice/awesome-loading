@@ -58,6 +58,6 @@ module.exports = {
   },
   plugins: [
     extractSass,
-    //new UglifyJsPlugin()
+    // new UglifyJsPlugin()
   ]
 }

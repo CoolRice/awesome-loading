@@ -1,6 +1,7 @@
-# Awesome Loading
+# [Awesome Loading](http://www.awesome-loading.com)
 
-A collection of awesome CSS loading animations 💥 , [www.awesome-loading.com](www.awesome-loading.com)
+
+A collection of awesome CSS loading animations 💥
 
 ## Features
 - [x] Pure CSS & No JavaScript
