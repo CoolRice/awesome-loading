@@ -85,6 +85,7 @@ class LoadingSection extends React.Component {
              this.renderLoadingItem('circle-lines-chase', 3),
              this.renderLoadingItem('five-bars-vertical', 5),
              this.renderLoadingItem('progress-bar-stripes', 0),
+             this.renderLoadingItem('nfs-style-loading', 6),
            ])
          }
          {showCodeDialog && <SourceDialog.default selectedClassName={selectedClassName} closeDialog={this.closeDialog} innerDivNumber={innerDivNumber} classContent={selectedClassContent}/>}
