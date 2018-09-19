@@ -8,6 +8,13 @@ class LoadingSection extends React.Component {
     };
     this.closeDialog = this.closeDialog.bind(this);
   }
+
+  componentDidMount() {
+    import(/* webpackChunkName: "sourceDialog" */ './SourceDialog').then(SourceDialog => {
+      this.setState({ SourceDialog });
+    });
+  }
+
   renderItem(fragments) {
     return fragments.map((fragment, index) =>
       <div onClick={this.openModal.bind(this, fragment.props.className, fragment.props.innerdivnumber)} key={index} className="col">
@@ -49,9 +56,7 @@ class LoadingSection extends React.Component {
   }
 
   openModal(selectedClassName, innerDivNumber) {
-    import(/* webpackChunkName: "sourceDialog" */ './SourceDialog').then(SourceDialog => {
-      this.setState({ SourceDialog, modalIsOpen: true, selectedClassName, innerDivNumber, selectedClassContent: this.getStyle(selectedClassName) });
-    });
+    this.setState({ modalIsOpen: true, selectedClassName, innerDivNumber, selectedClassContent: this.getStyle(selectedClassName) });
   }
 
   renderLoadingItem(className, innerDivNumber) {
