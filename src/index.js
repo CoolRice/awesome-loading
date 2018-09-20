@@ -15,7 +15,7 @@ class App extends React.Component {
              <div className="header-secendary">A pure CSS loading animation collection</div>
            </div>
          </header>
-         <LoadingSection />
+         <LoadingSection/>
          <GithubCorner
            href="https://github.com/CoolRice/awesome-loading"
            octoColor="#353537"
