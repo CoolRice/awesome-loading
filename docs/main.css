@@ -17,7 +17,7 @@ body {
     background-color: #353537; }
     @media screen and (max-device-width: 414px) {
       #app header {
-        height: 200px; } }
+        height: 400px; } }
     #app header .header {
       font-size: 70px;
       color: #ff6347;
@@ -47,6 +47,10 @@ body {
       border-radius: 4px;
       box-shadow: 0 2px 7px rgba(0, 0, 0, 0.37);
       cursor: pointer; }
+      @media screen and (max-device-width: 414px) {
+        #app .loading-section .col {
+          width: 31%;
+          padding-bottom: 31%; } }
       #app .loading-section .col .content {
         width: 80%;
         text-align: center;
