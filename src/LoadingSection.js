@@ -88,6 +88,7 @@ class LoadingSection extends React.Component {
              this.renderLoadingItem('three-dots-jump', 3),
              this.renderLoadingItem('circle-dots-scale', 8),
              this.renderLoadingItem('circle-lines-chase', 3),
+             this.renderLoadingItem('arc-rotate', 0),
              this.renderLoadingItem('five-bars-vertical', 5),
              this.renderLoadingItem('progress-bar-stripes', 0),
              this.renderLoadingItem('nfs-style-loading', 6),

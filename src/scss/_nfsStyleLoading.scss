@@ -29,11 +29,11 @@
   div:nth-child(6) {
     --n: 6;
   }
-  
+
   div {
     width: 15px;
     height: 30px;
-    background: #6d6363;
+    background: $primary-color;
     border-radius: 2px;
     display: inline-block;
     margin-left: 5px;
